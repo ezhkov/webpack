@@ -1,0 +1,86 @@
+input[type=text], input[type=email], input[type=password], input[type=number], input[type=date], input[type=tel], textarea {
+  border: none;
+  -webkit-appearance: textfield;
+  min-height: 2.4rem;
+  background: $cWhite;
+  border-bottom: 2px solid #D4D4D4;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 3.2rem 0 0.8rem 0;
+  display: block;
+  width: 100%;
+  @include meta;
+  font-size: 1.6rem;
+  color: $cBlack;
+  line-height: 2.4rem;
+  transition: border-color 0.3s;
+  &::-webkit-input-placeholder {
+    opacity: 0;
+    line-height: 3.2rem;
+  }
+  &:-moz-placeholder {
+    opacity: 0;
+  }
+  &:-ms-input-placeholder {
+    opacity: 0;
+  }
+  &:focus {
+    outline: none;
+    border-bottom-color: $cBrand;
+    +.form__label {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      top: 0.8rem;
+    }
+  }
+  &:disabled {
+    color: rgba($cBlack, 0.5);
+    +label {
+      color: rgba($cBlack, 0.5);
+    }
+  }
+  &.filled {
+    +.form__label {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      top: 0.8rem;
+    }
+  }
+}
+
+textarea {
+  border: 2px solid #D4D4D4;
+  height: 20rem;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding: 3.2rem 0 0.8rem 0;
+  transition: border-color 0.3s;
+  resize: none;
+  &::-webkit-input-placeholder {
+    opacity: 0;
+    line-height: 2.4rem;
+  }
+  &:-moz-placeholder {
+    opacity: 0;
+    line-height: 2.4rem;
+  }
+  &:-ms-input-placeholder {
+    opacity: 0;
+    line-height: 2.4rem;
+  }
+  &:focus {
+    border-color: $cBrand;
+  }
+  &.textarea--smaller {
+    height: 12rem;
+  }
+}
+
+input[type=date] {
+  color: #fff;
+  &.filled {
+    color: $cBlack;
+  }
+}
+

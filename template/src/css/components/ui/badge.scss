@@ -1,0 +1,30 @@
+.badge {
+  display: inline-block;
+  min-width: 1.8rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-sizing: border-box;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  background:  $cGreen;
+  border-radius: 1rem;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.2rem!important;
+  color: #FFFFFF;
+  text-transform: none!important;
+}
+
+.badge--secondary {
+  min-width: 1.9rem;
+  height: 1.9rem;
+  line-height: 1.7rem;
+  background: transparent;
+  border: 1px solid #979797;
+  font-family: Helvetica, sans-serif;
+  color: $cLightGrey;
+  border-radius: 2rem;
+  margin-top: -5px;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}

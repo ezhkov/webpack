@@ -1,0 +1,99 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 3.2rem;
+  border-top:  1px solid rgba(#A0A0A0, 0.24);
+  li {
+    &.left-arrow, &.right-arrow {
+
+    }
+  }
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+}
+
+.pagination__item {
+  display: flex;
+  align-items: stretch;
+  height: 3.2rem;
+  .pagination__link {
+    @include meta;
+    font-size: 17px;
+    color: #A0A0A0;
+    &:hover {
+      color: $cBrand;
+      cursor: pointer;
+    }
+  }
+  &.active {
+    .pagination__link {
+      color: inherit;
+      @include metam;
+      &:hover {
+        color: inherit;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.pagination__link {
+  min-width: 3.2rem;
+  height: 3.2rem;
+  box-sizing: border-box;
+  line-height: 3.2rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  text-align: center;
+  display: block;
+  transition: color 0.3s;
+  @include metam;
+  &[href] {
+    @include meta;
+    font-size: 17px;
+    color: #A0A0A0;
+    &:hover {
+      color: $cBrand;
+    }
+  }
+}
+
+.pagination__action {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(#A0A0A0, 0.15);
+  border-radius: 50%;
+  transition: border-color 0.3s;
+  svg {
+    display: block;
+  }
+  use {
+    transition: stroke 0.3s;
+    stroke: #595959;
+  }
+  &:hover {
+    border-color: $cBrand;
+    use {
+      stroke: $cBrand;
+    }
+  }
+  &:first-child {
+    margin-right: 2.4rem;
+    svg {
+      margin-left: -2px;
+    }
+  }
+  &:last-child {
+    margin-left: 2.4rem;
+    svg {
+      margin-right: -2px;
+    }
+  }
+}

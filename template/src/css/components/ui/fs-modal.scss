@@ -1,0 +1,66 @@
+.fs-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #F7F7F7;
+  z-index: 9000;
+  padding-top: 9.6rem;
+  text-transform: none;
+  .wrapper {
+    height: 100%;
+  }
+}
+
+.fs-modal-scroller {
+  background: #FFFFFF;
+  border-radius: 4px;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fs-modal-content {
+  background: #FFFFFF;
+  padding-top: 5.6rem;
+  margin-left: 7.2rem;
+  margin-right: 7.2rem;
+}
+
+
+.fs-modal-header {
+  @include meta;
+  font-size: 6rem;
+  color: #262626;
+  letter-spacing: -0.75px;
+  line-height: 5.6rem;
+  text-transform: none;
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(#A0A0A0, 0.24);
+}
+
+.fs-modal-close {
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  left: 50%;
+  top: 3.2rem;
+  padding: 1.4rem;
+  transform: translateX(-50%);
+  border: 1px solid rgba(#A0A0A0, 0.25);
+  border-radius: 50%;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij48cGF0aCBkPSJNMTMgMUwxIDEzTTEgMWwxMiAxMiIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMyNjI2MjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transition: transform 0.4s;
+  &:hover {
+    transform: translateX(-50%) rotate(180deg);
+  }
+}
+
+.fs-modal-footer {
+  padding-bottom: 4.8rem;
+}

@@ -1,74 +1,40 @@
 // https://eslint.org/docs/user-guide/configuring
 
 module.exports = {
-  root: true,
-  parserOptions: {
-    parser: 'babel-eslint'
+  "env": {
+    "jquery": true
   },
-  env: {
-    browser: true,
+  "extends": "airbnb-base",
+  "globals": {
+    "Swiper": true,
+    "isMobile": true,
+    "Cleave": true,
+    "PS": true,
+    "baron": true,
+    "document": true,
+    "window": true,
+    "FormData": true,
+    "fetch": true,
+    "navigator": true,
+    "_": true
   },
-  {{#if_eq lintConfig "standard"}}
-  extends: [
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential', 
-    // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-    'standard'
-  ],
-  {{/if_eq}}
-  {{#if_eq lintConfig "airbnb"}}
-  // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-  // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-  extends: ['plugin:vue/essential', 'airbnb-base'],
-  {{/if_eq}}
-  {{#if_eq lintConfig "none"}}
-  // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-  // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-  extends: ['plugin:vue/essential'],
-  {{/if_eq}}
-  // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
-  {{#if_eq lintConfig "airbnb"}}
-  // check if imports actually resolve
-  settings: {
-    'import/resolver': {
-      webpack: {
-        config: 'build/webpack.base.conf.js'
-      }
-    }
-  },
-  {{/if_eq}}
-  // add your custom rules here
-  rules: {
-    {{#if_eq lintConfig "standard"}}
-    // allow async-await
-    'generator-star-spacing': 'off',
-    {{/if_eq}}
-    {{#if_eq lintConfig "airbnb"}}
-    // don't require .vue extension when importing
-    'import/extensions': ['error', 'always', {
-      js: 'never',
-      vue: 'never'
-    }],
-    // disallow reassignment of function parameters
-    // disallow parameter object manipulation except for specific exclusions
-    'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'state', // for vuex state
-        'acc', // for reduce accumulators
-        'e' // for e.returnvalue
-      ]
-    }],
-    // allow optionalDependencies
-    'import/no-extraneous-dependencies': ['error', {
-      optionalDependencies: ['test/unit/index.js']
-    }],
-    {{/if_eq}}
-    // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+  "rules": {
+    "class-methods-use-this": [0],
+    "func-names": [0, "never"],
+    "max-len": [1, 180, 2, {"ignoreComments": true}],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "new-cap": ["error", { "properties": false }],
+    "radix": [0],
+    "no-unused-vars": [1, {"vars": "local", "args": "none"}],
+    "no-use-before-define": [0],
+    "no-new": [0],
+    "import/prefer-default-export": [0],
+    "no-plusplus": [0],
+    "no-prototype-builtins": 0,
+    "no-underscore-dangle": 0,
+    "no-continue": 0,
+    "no-param-reassign": 0,
+    "import/no-dynamic-require": 0,
   }
 }
+

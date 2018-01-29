@@ -1,0 +1,106 @@
+.specialist-wrapper {
+  width: 65.6rem;
+  h1 {
+    width: 100%;
+    max-width: inherit;
+  }
+}
+
+.specialist-detail {
+  .specialist__exp {
+
+  }
+  .specialist__info {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.specialist-header {
+  margin-bottom: 1.6rem;
+}
+
+.specialist-resume {
+  margin-top: 4.8rem;
+  padding-bottom: 4rem;
+  border-bottom:  1px solid rgba(#a0a0a0, 0.24);
+}
+
+.spr__row {
+  +.spr__row {
+    margin-top: 2.4rem;
+  }
+}
+
+.spr__header {
+  margin-bottom: 2.4rem;
+}
+
+.spr__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.spr__item {
+  width: calc(50% - 4rem);
+  margin-left: 4rem;
+  margin-right: 2rem;
+  margin-bottom: 1.6rem;
+  +.spr__item {
+    margin-top: 0;
+  }
+}
+
+.specialist-photo {
+  position: absolute;
+  right: 7.2rem;
+  top: 12rem;
+  width: 27.2rem;
+  text-align: center;
+}
+
+.specialist-photo-container {
+  margin-bottom: 4rem;
+  height: 27.2rem;
+  padding-top: 2rem;
+  box-sizing: border-box;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.specialist__action {
+  .btn {
+    width: 100%;
+  }
+}
+
+.specialist-certificates {
+  margin-top: 5.6rem;
+}
+
+.cert-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.cert-item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  a {
+
+  }
+  img {
+
+  }
+}
+
+
+
