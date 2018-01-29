@@ -23,7 +23,7 @@ bitrix/themes/.default/modules.css
 node_modules/
 *.sql
 upload.tgz
-.idea/
+/.idea
 .sass-cache/
 *.iml
 .htaccess
