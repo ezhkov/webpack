@@ -11,9 +11,7 @@ import Bus from '../bus';
 export default {
   data() {
     return {
-      pageData: window.GELIOS,
-      modalComponent: window.GELIOS.isSearchActive ? 'search' : 'auth',
-      // modalComponent: 'record',
+      pageData: window.PAGE_DATA,
     };
   },
   methods: {
