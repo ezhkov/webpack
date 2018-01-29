@@ -1,0 +1,92 @@
+.specialists {
+
+}
+
+.specialists__form {
+  margin-bottom: 4rem;
+}
+
+.specialists__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-left: -2.8rem;
+  margin-right: -2.8rem;
+  overflow: hidden;
+  margin-bottom: -1px;
+}
+
+.specialists__item {
+  width: 32rem;
+  margin-left: 2.8rem;
+  margin-right: 2.8rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(#A0A0A0, 0.24);
+  margin-bottom: 5.6rem;
+  &:nth-last-child(-n+3) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.specialist__image {
+  width: 100%;
+  height: 24rem;
+  margin-bottom: 4rem;
+  display: block;
+  background: #F7F7F7;
+  padding-top: 2rem;
+  box-sizing: border-box;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.specialist__info {
+
+}
+
+.specialist__name {
+  @include metam;
+  font-size: 1.8rem;
+  color: #262626;
+  letter-spacing: -0.23px;
+  line-height: 2rem;
+}
+
+.specialist__job {
+  margin-top: 0.8rem;
+  color: $cGrey;
+}
+
+.specialist__exp {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.specialist__about {
+  font-size: 1.7rem;
+  color: $cGrey;
+}
+
+.specialist__actions {
+  margin-top: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.specialist__meta {
+  font-size: 1.4rem;
+  color: #7B7B7B;
+  margin-top: 1.6rem;
+}

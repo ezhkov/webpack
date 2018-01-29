@@ -1,0 +1,61 @@
+@import url("//hello.myfonts.net/count/355078");
+
+@font-face {
+  font-family: 'PFCentroSlabPro-Thin';
+  src: url('/static/fonts/355078_0_0.woff2') format('woff2'),
+  url('/static/fonts/355078_0_0.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FFMetaWebProNormal';
+  src: url('/static/fonts/355078_1_0.woff2') format('woff2'),
+  url('/static/fonts/355078_1_0.woff') format('woff'),url('/static/fonts/355078_1_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FFMetaWebProMedium';
+  src: url('/static/fonts/355078_2_0.woff2') format('woff2'),
+  url('/static/fonts/355078_2_0.woff') format('woff'),url('/static/fonts/355078_2_0.ttf') format('truetype');
+}
+
+//@font-face {
+//  font-family: 'PFAgoraSlabPro-Thin';
+//  src: url('/static/fonts/PFAgoraSlabPro-Thin.woff2') format('woff2'),
+//  url('/static/fonts/PFAgoraSlabPro-Thin.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+//@font-face {
+//  font-family: 'MetaPro-Norm';
+//  src: url('/static/fonts/MetaPro-Norm.woff2') format('woff2'),
+//  url('/static/fonts/MetaPro-Norm.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'MetaPro-Medi';
+//  src: url('/static/fonts/MetaPro-Medi.woff2') format('woff2'),
+//  url('/static/fonts/MetaPro-Medi.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+@mixin pf {
+  font-family: 'PFCentroSlabPro-Thin', serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin meta {
+  font-family: 'FFMetaWebProNormal', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin metam {
+  font-family: 'FFMetaWebProMedium', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}

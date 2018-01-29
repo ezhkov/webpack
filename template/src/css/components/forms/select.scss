@@ -1,0 +1,63 @@
+select {
+  opacity: 0;
+  position: relative;
+  z-index: 1;
+  -webkit-appearance: none;
+  width: 100%;
+  font-size: 1.6rem;
+  color: $cBlack;
+  line-height: 2.4rem;
+  border: 0;
+  padding-top: 3.2rem;
+  padding-bottom: 0.8rem;
+  &:focus {
+    ~ .select-label {
+      border-bottom-color: $cBrand;
+    }
+  }
+
+  ~ .form__label {
+    right: 0;
+    padding-bottom: 0;
+  }
+  &.filled {
+    ~ .form__label {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      top: 0.8rem;
+    }
+    ~ .select-label {
+      color: $cBlack;
+    }
+  }
+}
+
+.select-label {
+  position: absolute;
+  z-index: 0;
+  font-size: 1.6rem;
+  color: transparent;
+  line-height: 2.4rem;
+  min-height: 2.4rem;
+  border-bottom: 2px solid #D4D4D4;
+  padding-bottom: 0.8rem;
+  top: 3.2rem;
+  display: block;
+  width: 100%;
+
+  transition: color 0.2s;
+  &.dis {
+    color: rgba(100, 102, 105, 0.2);
+  }
+  &:after {
+    content: '';
+    width: 3.2rem;
+    height: 3.2rem;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI1IiB2aWV3Qm94PSIwIDAgMTAgNSI+ICA8cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjM2QzIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIyMCAxNSAxNiAxOCAxMiAxNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExIC0xNCkiLz48L3N2Zz4=);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

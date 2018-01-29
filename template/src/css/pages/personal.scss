@@ -1,0 +1,91 @@
+.personal {
+  h4 {
+    margin-top: 4.8rem;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.personal__section {
+  margin-top: 3.2rem;
+}
+
+.personal-section__header {
+  font-size: 1.7rem;
+  @include metam;
+  margin-bottom: 1.6rem;
+}
+
+.personal-section__rows {
+  width: 100%;
+  tr:first-child {
+    td {
+      padding-top: 0;
+    }
+  }
+  td {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    &:first-child {
+      padding-right: 2rem;
+    }
+    &[colspan] {
+      .lk__action {
+        margin-left: 0;
+      }
+    }
+  }
+  .lk__action {
+    margin-left: 1.6rem;
+  }
+}
+
+.persnoal-add-info {
+
+}
+
+.personal__conn-accs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 3.2rem;
+}
+
+.personal-conn-acc {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  &:first-child {
+    width: 100%;
+  }
+}
+
+.pca__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 4px;
+  background: #F2F2F2;
+  margin-right: 1.6rem;
+}
+
+.pca__text {
+
+}
+
+.pca__action {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  span {
+
+  }
+  svg {
+
+  }
+}
+
+.personal__change-pwd {
+  width: 32rem;
+}

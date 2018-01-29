@@ -1,0 +1,402 @@
+.policy {
+
+}
+
+.policy__header {
+
+}
+
+.policy__name {
+  font-size: 4.8rem;
+  letter-spacing: -1px;
+  line-height: 4.8rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.policy-name__edit {
+  border: 0;
+  background: transparent;
+  margin-left: 2rem;
+  margin-bottom: -1.6rem;
+  &:hover {
+    cursor: pointer;
+    use {
+      fill: $cBlack;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  use {
+    transition: fill 0.3s;
+    fill: $cBrand;
+  }
+
+}
+
+.policy-name__text {
+  position: relative;
+  z-index: 0;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -1rem;
+    right: -1rem;
+    top: -1rem;
+    bottom: -1rem;
+    border: 2px dashed rgba($cBrand, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    border-radius: 4px;
+  }
+  &[contenteditable=true] {
+    &:after {
+      opacity: 1;
+      visibility: visible;
+    }
+    +button {
+      @extend %button;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.policy-name__input {
+
+}
+
+.policy__type {
+  font-size: 2.4rem;
+  letter-spacing: -0.3px;
+  line-height: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.policy-header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    font-size: 1.4rem;
+    transition: color 0.3s;
+    &:hover {
+      color: $cBrand;
+    }
+  }
+  div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    & > a {
+      font-size: 1.7rem;
+      margin-left: 2.4rem;
+    }
+  }
+}
+
+.policy__info {
+  margin-top: 3.2rem;
+  padding: 4rem 3.2rem;
+  background: #F7F7F7;
+}
+
+.policy-info__header {
+  p {
+
+  }
+  h4 {
+    margin-top: 0.8rem;
+  }
+}
+
+.policy-info__body {
+  padding-top: 2.4rem;
+  margin-top: 3.2rem;
+  border-top: 1px solid rgba(#A0A0A0, 0.24);
+  > table {
+    width: 100%;
+    td {
+      padding-right: 4rem;
+      vertical-align: top;
+      color: #595959;
+      span {
+
+      }
+      &:last-child {
+        text-align: right;
+        padding-right: 0;
+      }
+      p.text--error {
+        margin-top: 0.8rem;
+      }
+    }
+  }
+}
+
+.policy-info__footer {
+  position: relative;
+  > table {
+    margin-top: 3.6rem;
+    td {
+      vertical-align: top;
+      width: 45%;
+    }
+  }
+  .action-button {
+    margin-top: 0;
+    padding-left: 0;
+  }
+}
+
+.policy__extra {
+  position: absolute;
+  right: 0;
+  top: 1.4rem;
+  a.trigger {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      display: block;
+    }
+    use {
+      fill: $cBrand;
+      transition: fill 0.3s;
+    }
+    &:hover {
+      use {
+        fill: $cBlack;
+      }
+    }
+  }
+  &:hover {
+    .actions {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+    }
+  }
+  .actions {
+    position: absolute;
+    white-space: nowrap;
+    padding: 2.4rem;
+    background: #fff;
+    border-radius: 0.4rem;
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.1);
+    transition: opacity 0.3s, transform 0.3s;
+    left: 50%;
+    transform: translateX(-50%) scale(0.4);
+    opacity: 0;
+  }
+  a.action {
+    transition: color 0.3s;
+    &:hover {
+      color: $cBrand;
+    }
+    + a.action {
+      margin-top: 2.4rem;
+    }
+  }
+}
+
+.policy__services {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.policy-services__item {
+  width: 28rem;
+  box-sizing: border-box;
+  padding: 2.4rem;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.psi__header {
+  margin-bottom: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.psi__icon {
+
+}
+
+.psi__status {
+
+}
+
+.psi__body {
+
+}
+
+.psi__footer {
+  margin-top: 2.4rem;
+}
+
+
+.policy__section {
+  margin-top: 8rem;
+  h3 + h4 {
+    margin-bottom: 0;
+  }
+}
+
+.policy__content {
+  position: relative;
+  margin-top: 2.4rem;
+  table {
+    width: 100%;
+    margin-left: 2.4rem;
+    td {
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+      vertical-align: middle;
+    }
+    tbody {
+      border-bottom: 1px solid rgba(#A0A0A0, 0.24);
+      &:first-child {
+        border-bottom: 0;
+        p.policy__subject {
+          margin-left: -2.4rem;
+        }
+      }
+    }
+    tr:last-child {
+      td {
+        padding-bottom: 2.4rem;
+      }
+    }
+    tr:first-child {
+      td {
+        padding-top: 0;
+      }
+    }
+    td[colspan] {
+      padding-bottom: 1.6rem;
+      vertical-align: top;
+    }
+  }
+}
+
+.policy__subject {
+  padding-left: 2.4rem;
+  position: relative;
+  .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  p + p {
+    margin-top: 0.8rem;
+  }
+  +.policy__subject {
+    margin-top: 1.6rem;
+  }
+  p > span {
+    margin-left: 1.6rem;
+  }
+}
+
+.policy-subject__image {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  right: 7.2rem;
+  top: -4rem;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.policy__options {
+  padding-top: 4rem;
+  padding-bottom: 0.8rem;
+  margin-left: 2.4rem;
+  .form__checkbox {
+    margin-top: 0;
+    margin-right: 4.8rem;
+  }
+}
+
+.policy-options__items {
+  display: flex;
+  align-items: center;
+}
+
+.policy__total {
+  margin-top: 3.2rem;
+  .sum {
+    float: right;
+  }
+  .text--darken {
+    float: left;
+  }
+  .fill {
+    display: block;
+    overflow: hidden;
+    border-left: 8px solid $cWhite;
+    border-right: 8px solid $cWhite;
+    height: 1px;
+    margin-top: 1.4rem;
+    background: linear-gradient(to right, transparent 75%, #A0A0A0 75%);
+    background-size: 4px 1px;
+  }
+  .sum-row {
+    overflow: hidden;
+  }
+}
+
+table.policy-info__table {
+  margin-bottom: 5.6rem;
+  thead {
+    th {
+      white-space: nowrap;
+      padding: 1.6rem;
+      &:first-child {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+  tbody {
+    tr:nth-child(odd) {
+      td {
+        background: #F2F2F2;
+      }
+    }
+    td {
+      padding: 1.6rem;
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.policy__customer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2.4rem;
+  dd {
+    width: 20%;
+  }
+  dt {
+    width: 80%;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+}

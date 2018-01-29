@@ -1,0 +1,76 @@
+.collapsible-closed {
+  [data-collapsible-body] {
+    height: 0 !important;
+  }
+}
+
+[data-collapsible-body] {
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+[data-collapsible] {
+  border-bottom: 1px solid $cBtnSec;
+  + [data-collapsible] {
+    border-top: 1px solid $cBtnSec;
+    margin-top: -1px;
+  }
+}
+
+[data-collapsible-header] {
+
+}
+
+[data-collapsible-inner] {
+
+}
+
+.accordion {
+
+}
+
+.accordion__trigger {
+  /* Программа «Забота о: */
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  padding-right: 8.8rem;
+  &:hover {
+    cursor: pointer;
+  }
+  &:after {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    border-radius: 50%;
+    right: 0;
+    top: 50%;
+    box-sizing: border-box;
+    border: 1px solid rgba(#A0A0A0, 0.15);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMTAgNiI+ICA8cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTk1OTU5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwIDAgNCA0IDggMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSIvPjwvc3ZnPg==);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transform-origin: 50% 50%;
+    transform: translateY(-50%);
+    transition: border-width 0.2s, border-color 0.2s, transform 0.3s;
+  }
+
+  .collapsible-opened & {
+    &:after {
+      border: 2px solid $cGreen;
+      transform: rotate(180deg) translateY(50%);
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMTAgNiI+ICA8cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN0VCRDFCIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSI4IDQgNCAwIDAgNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTE4MCA0LjUgMi41KSIvPjwvc3ZnPg==);    }
+  }
+}
+
+.accordion__body {
+
+}
+
+.accordion__inner {
+  padding-bottom: 2.4rem;
+  font-size: 1.6rem;
+}
