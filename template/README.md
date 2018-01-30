@@ -2,35 +2,70 @@
 
 > {{ description }}
 
-## Build Setup
+# Developer Manual
+
+## Окружение сборки
 
 ``` bash
-# install dependencies
+# переходим в папку проекта и выполняем
 npm install
 
-# serve with hot reload at localhost:8080
+# запускаем окружение для разработки с hot reload на localhost:8080
 npm run dev
 
-# build for production with minification
+# сборка для продакшена с минификацией
 npm run build
 
-# build for production and view the bundle analyzer report
+# сборка для продакшена с просмотром аналитики по бандлам
 npm run build --report
-{{#unit}}
-
-# run unit tests
-npm run unit
-{{/unit}}
-{{#e2e}}
-
-# run e2e tests
-npm run e2e
-{{/e2e}}
-{{#if_or unit e2e}}
-
-# run all tests
-npm test
-{{/if_or}}
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Чтобы окружение для разработки корректно отрабатывало PHP-скрипты, нужно настроить проксирование на локальный домен в файле `/config/index.js`
+
+```javascript
+proxyTable: {
+    '/': {
+        target: {
+          host: "{{name}}.lc", //
+          protocol: "http:",
+          port: 80
+        },
+        changeOrigin: true,
+        secure: false
+      }
+    },
+```
+
+## Структура папок
+
+```
+/build - папка с файлами конфигурации сборщика
+/config - папка с файлами, содержащими параметры сборки
+/h - статичная PHP-верстка макетов
+/src - папка с исходниками CSS/JS/Vue
+/static - папка с ресурсами (шрифты, иконки, картинки)
+```
+
+### Структура папки SRC
+
+```
+/components - Vue-компоненты (включают в себя CSS, JS, HTML)
+/css - стили для страниц и компонентов сайта, не описанные во Vue-файлах
+/mixins - миксины для Vue-компонентов и страниц
+/pages - Javascript-код для страниц
+bus.js - шина событий
+engine.js - точка входа в приложение
+utils.js - разные Javascript-утилиты
+```
+
+## Процесс разработки
+
+Разработка ведется в `development`-окружении. В этом режиме на диске не создается никаких файлов стилей или скриптов. Все необходимые файлы висят в оперативной памяти
+
+## Выливка изменений
+
+Сборка JS и CSS проекта производится в папку `/dist`. Эта папка исключена из репозитория.
+
+После выполнения `git pull` на сервере необходимо произвести production-сборку проекта.
+
+Таким образом в GIT находятся только исходные файлы, что минимизирует возникновение конфликтов при выливке несколькими специалистами или объединении веток.
